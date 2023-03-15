@@ -1,8 +1,7 @@
-class Mushroom {
+class Mushroom extends LivingCreature{
     constructor(x,y){
-            this.x = x
-            this.y = y
-            this.multiply = 0
+            super(x, y)
+            this.multiply = 0;
             this.directions = [  ];
         
         }
@@ -19,26 +18,9 @@ class Mushroom {
                 [this.x + 1, this.y + 1]
             ];
         }
-        chooseCell(char) {
+        chooseCell(ch) {
             this.getNewCoordinates();
-            let found = [];
-        
-        
-        for (let i in this.directions) {
-                let x = this.directions[i][0];
-                let y = this.directions[i][1];
-    
-    
-            if (y < matrix.length && y >= 0 && x < matrix[0].length && x >= 0) {
-                    if (matrix[y][x] == char) {
-                        found.push(this.directions[i]);
-                    }
-                }
-    
-                
-            }
-    
-            return found;
+            return this.super.chooseCell(ch);
         }
     
     
