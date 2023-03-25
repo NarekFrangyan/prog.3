@@ -86,55 +86,55 @@ function matrixGenerator(matrixSize,grass,grassEater,predator,mushroom,qar,car,a
 var matrix = matrixGenerator(30,40,10,0,4,15,3,15)
 var side = 25
 //
-var grassArr = []
-var grassEaterArr = []
-var predatorArr = [] 
-var mushroomArr = []
-var qarArr = []
-var carArr = []
-var amenakerArr = []
+// var grassArr = []
+// var grassEaterArr = []
+// var predatorArr = [] 
+// var mushroomArr = []
+// var qarArr = []
+// var carArr = []
+// var amenakerArr = []
 
 
 function setup() {
     frameRate(15)
     createCanvas(matrix[0].length * side ,matrix.length * side)
     
-    for (let y = 0; y < matrix.length; y++) {
-        for (let x = 0; x < matrix[y].length; x++) {
+//     for (let y = 0; y < matrix.length; y++) {
+//         for (let x = 0; x < matrix[y].length; x++) {
             
-            if(matrix[y][x] == 1){
-                var gr = new Grass(x,y)
-                grassArr.push(gr)
+//             if(matrix[y][x] == 1){
+//                 var gr = new Grass(x,y)
+//                 grassArr.push(gr)
                 
-            }else  if(matrix[y][x] == 2){
-                var grEat = new GrassEater(x,y)
-                grassEaterArr.push(grEat)
+//             }else  if(matrix[y][x] == 2){
+//                 var grEat = new GrassEater(x,y)
+//                 grassEaterArr.push(grEat)
                 
-            }else if(matrix[y][x] == 3){
-                var pred = new Predator(x,y)
-                predatorArr.push(pred)
+//             }else if(matrix[y][x] == 3){
+//                 var pred = new Predator(x,y)
+//                 predatorArr.push(pred)
                 
-            }else if(matrix[y][x] == 4){
-                var mush = new Mushroom(x,y)
-                mushroomArr.push(mush)
+//             }else if(matrix[y][x] == 4){
+//                 var mush = new Mushroom(x,y)
+//                 mushroomArr.push(mush)
                 
-            }else if(matrix[y][x] == 5){
-                var qar = new Qar(x,y)
-                qarArr.push(qar)
+//             }else if(matrix[y][x] == 5){
+//                 var qar = new Qar(x,y)
+//                 qarArr.push(qar)
                 
-            }else if(matrix[y][x] == 6){
-                var car = new Car(x,y)
-                carArr.push(car)
+//             }else if(matrix[y][x] == 6){
+//                 var car = new Car(x,y)
+//                 carArr.push(car)
 
-            }else if(matrix[y][x] == 7){
-                var amen = new Amenaker(x,y)
-                amenakerArr.push(amen)
-            }
-        }
-    }
+//             }else if(matrix[y][x] == 7){
+//                 var amen = new Amenaker(x,y)
+//                 amenakerArr.push(amen)
+//             }
+//         }
+//     }
 
 
-}
+// }
 
 
 
@@ -207,3 +207,4 @@ function draw() {
   }
      }
        
+    }

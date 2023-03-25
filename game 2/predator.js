@@ -83,11 +83,15 @@ module.exports = class Predator extends LivingCreature{
             this.move()
         }
     }   
-
+    random(ch){
+        let found = this.chooseCell(ch);
+        let result = Math.floor(Math.random()*found.length)
+        return found[result];
+    }
     move() {
-        let emptyCell = this.chooseCell(0);
-        let newCell = random(emptyCell)
-
+        // let emptyCell = this.chooseCell(0);
+        // let newCell = random(emptyCell)
+var newCell = this.random(0)
         if (newCell) {
             let newX = newCell[0];
             let newY = newCell[1];

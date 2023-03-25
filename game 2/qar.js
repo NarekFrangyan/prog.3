@@ -56,11 +56,15 @@ module.exports = class Qar  extends LivingCreature{
                 this.move()
             }
         }
-    
+        random(ch){
+            let found = this.chooseCell(ch);
+            let result = Math.floor(Math.random()*found.length)
+            return found[result];
+        }
         mul() {
-            let emptyCell = this.chooseCell(0);
-            let newCell = random(emptyCell)
-       
+            // let emptyCell = this.chooseCell(0);
+            // let newCell = random(emptyCell)
+       var newCell = this.random
             if (newCell && this.energy > 6) {
                 let newX = newCell[0];
                 let newY = newCell[1];
