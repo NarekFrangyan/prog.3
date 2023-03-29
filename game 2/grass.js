@@ -19,11 +19,7 @@ module.exports =class Grass extends LivingCreature {
         
         }
 
-    chooseCell(ch){
 
-           this.getNewCoordinates();
-           return this.super.chooseCell(ch);
-    }
     random(ch){
         let found = this.chooseCell(ch);
         let result = Math.floor(Math.random()*found.length)

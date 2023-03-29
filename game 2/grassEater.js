@@ -19,14 +19,20 @@ module.exports = class GrassEater extends LivingCreature{
             [this.x + 1, this.y + 1]
         ];
     }
-    chooseCell(char,char1) {
-        this.getNewCoordinates();
-        return this.super.chooseCell(ch);
+   
+      
+
+    random(ch){
+        let found = this.chooseCell(ch);
+        let result = Math.floor(Math.random()*found.length)
+        return found[result];
+    
     }
     //բազմանալ
     mul() {
-        let emptyCell = this.chooseCell(0);
-        let newCell = random(emptyCell)
+        var newCell = this.random(0)
+        // let emptyCell = this.chooseCell(0);
+        // let newCell = random(emptyCell)
    console.log(newCell);
         if (newCell && this.energy > 12) {
             let newX = newCell[0];
