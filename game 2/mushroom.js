@@ -45,8 +45,9 @@ module.exports = class Mushroom extends LivingCreature{
     
     
         eat() {
-            let emptyCell = this.chooseCell(1);
-            let newCell = random(emptyCell)
+            // let emptyCell = this.chooseCell(1);
+            // let newCell = random(emptyCell)
+            var newCell = this.random(0)
     
             if (newCell) {
                 this.energy += 4;
@@ -80,9 +81,9 @@ module.exports = class Mushroom extends LivingCreature{
         }
     
         move() {
-            let emptyCell = this.chooseCell(0);
-            let newCell = random(emptyCell)
-    
+            // let emptyCell = this.chooseCell(0);
+            // let newCell = random(emptyCell)
+            var newCell = this.random(0)
           if (newCell) {
                 let newX = newCell[0];
                 let newY = newCell[1];

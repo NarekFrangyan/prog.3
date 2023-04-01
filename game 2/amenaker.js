@@ -30,7 +30,7 @@ let LivingCreature = require("./LivingCreature")
         var newCell = this.random(0)
         // let emptyCell = this.chooseCell(0);
         // let newCell = random(emptyCell)
-   console.log(newCell);
+       console.log(newCell);
         if (newCell && this.energy > 12) {
             let newX = newCell[0];
             let newY = newCell[1];
@@ -41,13 +41,14 @@ let LivingCreature = require("./LivingCreature")
 
             this.energy = 12;
         }
+    
+
+   
     }
-
-
     eat() {
-        let emptyCell = this.chooseCell(3,5);
-        let newCell = random(emptyCell)
-
+        // let emptyCell = this.chooseCell(3,5);
+        // let newCell = random(emptyCell)
+         var newCell = this.random(0)
         if (newCell) {
             this.energy += 5;
             let newX = newCell[0];
@@ -85,11 +86,8 @@ let LivingCreature = require("./LivingCreature")
         else {
             this.move()
         }
-    }
-    random(ch){
-        let found = this.chooseCell(ch);
-        let result = Math.floor(Math.random()*found.length)
-        return found[result];
+    
+   
     }
     //քայլել
     move() {

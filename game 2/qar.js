@@ -18,15 +18,20 @@ module.exports = class Qar  extends LivingCreature{
                 [this.x, this.y + 1],
                 [this.x + 1, this.y + 1]
             ];
-        }
-            chooseCell(ch) {    
-            this.getNewCoordinates();
-            return this.super.chooseCell(ch);
-        }
+           }   // }
+        //     // chooseCell(ch) {    
+        //     // this.getNewCoordinates();
+        //     // return this.super.chooseCell(ch);
+        // }
+        random(ch){
+            let found = this.chooseCell(ch);
+            let result = Math.floor(Math.random()*found.length)
+            return found[result]; }
+
         eat() {
-            let emptyCell = this.chooseCell();
-            let newCell = random(emptyCell)
-    
+            // let emptyCell = this.chooseCell();
+            // let newCell = random(emptyCell)
+            var newCell = this.random(0)
             if (newCell) {
                 this.energy += 5;
                 let newX = newCell[0];
@@ -56,11 +61,8 @@ module.exports = class Qar  extends LivingCreature{
                 this.move()
             }
         }
-        random(ch){
-            let found = this.chooseCell(ch);
-            let result = Math.floor(Math.random()*found.length)
-            return found[result];
-        }
+       
+        
         mul() {
             // let emptyCell = this.chooseCell(0);
             // let newCell = random(emptyCell)
@@ -76,10 +78,11 @@ module.exports = class Qar  extends LivingCreature{
                 this.energy = 7;
             }
         }
+           
         move() {
-            let emptyCell = this.chooseCell(0);
-            let newCell = random(emptyCell)
-    
+            // let emptyCell = this.chooseCell(0);
+            // let newCell = random(emptyCell)
+            var newCell = this.random(0)
             if (newCell) {
                 let newX = newCell[0];
                 let newY = newCell[1];
