@@ -119,7 +119,8 @@ const Predator = require("./predator")
 const Mushroom = require("./mushroom")
 const Qar = require("./qar")
 const Car = require("./car")
-const Amenaker = require("./amenaker")
+const Amenaker = require("./amenaker");
+const { link } = require('fs');
 
 function createobj(){
     for (let y = 0; y < matrix.length; y++) {
